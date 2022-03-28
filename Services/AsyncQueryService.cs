@@ -3,6 +3,7 @@
     public class AsyncQueryService
     {
         private readonly CommonService commonService;
+        private readonly LoggerService logger = new();
         private readonly int asyncCount = 2;
         public AsyncQueryService()
         {
@@ -16,7 +17,7 @@
                 var startTime = System.Diagnostics.Stopwatch.StartNew();
                 commonService.Primes(numbers);
                 startTime.Stop();
-                Console.WriteLine($"{n} Async - {startTime.ElapsedMilliseconds}ms");
+                logger.Log($"{n} Async - {startTime.ElapsedMilliseconds}ms");
             });
         }
 
@@ -31,20 +32,20 @@
         public async Task OneAsyncQuery(IEnumerable<int> numbers)
         {
             var startTime = System.Diagnostics.Stopwatch.StartNew();
-            Console.WriteLine("Start ASYNC Single results");
+            logger.Log("Start ASYNC Single results");
             await Run(numbers);
             startTime.Stop();
-            Console.WriteLine($"Final Single Async - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
+            logger.Log($"Final Single Async - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
         }
 
         public async Task WhenAllAsyncQuery(IEnumerable<int> numbers)
         {
-            Console.WriteLine("Start WhenAll results");
-            Console.WriteLine("Start WhenAll results");
+            logger.Log("Start WhenAll results");
+            logger.Log("Start WhenAll results");
             var startTime = System.Diagnostics.Stopwatch.StartNew();
             await Task.WhenAll(Run(numbers), Run(numbers));
             startTime.Stop();
-            Console.WriteLine($"Final WhenAll result \nAsync - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
+            logger.Log($"Final WhenAll result \nAsync - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
         }
     }
 }
