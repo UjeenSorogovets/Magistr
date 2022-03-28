@@ -1,6 +1,4 @@
-﻿using static WebApplication.Services.CommonService;
-
-namespace WebApplication.Services
+﻿namespace WebApplication.Services
 {
     public class SimpleQueryService
     {
