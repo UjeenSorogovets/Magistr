@@ -6,6 +6,7 @@
         {
 
         }
+
         public void Primes(IEnumerable<int> numbers)
         {
             var simpleQuery =

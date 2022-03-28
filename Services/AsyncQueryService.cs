@@ -1,10 +1,10 @@
 ﻿namespace WebApplication.Services
 {
-    public class AsyncQuery
+    public class AsyncQueryService
     {
         private readonly CommonService commonService;
-        private int asyncCount = 2;
-        public AsyncQuery()
+        private readonly int asyncCount = 2;
+        public AsyncQueryService()
         {
             commonService = new CommonService();
         }

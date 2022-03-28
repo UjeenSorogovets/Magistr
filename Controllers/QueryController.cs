@@ -9,9 +9,9 @@ namespace WebApplication.Controllers
     {
         private readonly ILogger<QueryController> _logger;
         private static readonly IEnumerable<int> numbers = Enumerable.Range(3, 1000000 - 3);
-        private readonly SimpleQuery simpleQuery = new();
+        private readonly SimpleQueryService simpleQuery = new();
         private readonly ParallelQueryService parallelQuery = new();
-        private readonly AsyncQuery asyncQuery = new(); 
+        private readonly AsyncQueryService asyncQuery = new(); 
         public QueryController(ILogger<QueryController> logger)
         {
             _logger = logger;

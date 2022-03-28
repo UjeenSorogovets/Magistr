@@ -2,10 +2,10 @@
 
 namespace WebApplication.Services
 {
-    public class SimpleQuery
+    public class SimpleQueryService
     {
         private readonly CommonService commonService;
-        public SimpleQuery()
+        public SimpleQueryService()
         {
             commonService = new CommonService();
         }
