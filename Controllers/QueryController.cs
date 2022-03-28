@@ -22,44 +22,28 @@ namespace WebApplication.Controllers
         [Route("RunSimple")]
         public void RunSimple()
         {
-            foreach (var degree in degrees)
-            {
-                IEnumerable<int> numbers = Enumerable.Range(3, degree);
-                simpleQuery.Run(numbers);
-            }
+            simpleQuery.RunMultiple(degrees);
         }
 
         [HttpGet]
         [Route("RunParallel")]
         public void RunParallel()
         {
-            foreach (var degree in degrees)
-            {
-                IEnumerable<int> numbers = Enumerable.Range(3, degree);
-                parallelQuery.Run(numbers);
-            }
+            parallelQuery.RunMultiple(degrees);
         }
 
         [HttpGet]
         [Route("RunOneAsyncQuery")]
         public async Task RunOneAsyncQuery()
         {
-            foreach (var degree in degrees)
-            {
-                IEnumerable<int> numbers = Enumerable.Range(3, degree);
-                await asyncQuery.OneAsyncQuery(numbers);
-            }
+            await asyncQuery.OneAsyncQueryMultiple(degrees);
         }
 
         [HttpGet]
         [Route("RunWhenAllAsyncQuery")]
         public async Task RunWhenAllAsyncQuery()
         {
-            foreach (var degree in degrees)
-            {
-                IEnumerable<int> numbers = Enumerable.Range(3, degree);
-                await asyncQuery.WhenAllAsyncQuery(numbers);
-            }
+            await asyncQuery.WhenAllAsyncQueryMultiple(degrees);
         }
 
         [HttpGet]

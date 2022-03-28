@@ -2,11 +2,10 @@
 {
     public class ParallelQueryService
     {
-        private readonly CommonService commonService;
         private readonly LoggerService logger = new();
         public ParallelQueryService()
         {
-            commonService = new CommonService();
+
         }
 
         public void Run(IEnumerable<int> numbers)
@@ -20,6 +19,15 @@
             int[] primes = parallelQuery.ToArray();
             startTime.Stop();
             logger.Log($"Parallel - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
+        }
+
+        public void RunMultiple(int[] degrees)
+        {
+            foreach (var degree in degrees)
+            {
+                IEnumerable<int> numbers = Enumerable.Range(3, degree);
+                Run(numbers);
+            }
         }
     }
 }

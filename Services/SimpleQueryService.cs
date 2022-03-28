@@ -17,5 +17,14 @@
             startTime.Stop();
             logger.Log($"Simple - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
         }
+
+        public void RunMultiple(int[] degrees)
+        {
+            foreach (var degree in degrees)
+            {
+                IEnumerable<int> numbers = Enumerable.Range(3, degree);
+                Run(numbers);
+            }
+        }
     }
 }

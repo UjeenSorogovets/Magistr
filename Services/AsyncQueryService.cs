@@ -38,6 +38,15 @@
             logger.Log($"Final Single Async - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
         }
 
+        public async Task OneAsyncQueryMultiple(int[] degrees)
+        {
+            foreach (var degree in degrees)
+            {
+                IEnumerable<int> numbers = Enumerable.Range(3, degree);
+                await OneAsyncQuery(numbers);
+            }
+        }
+
         public async Task WhenAllAsyncQuery(IEnumerable<int> numbers)
         {
             logger.Log("Start WhenAll results");
@@ -46,6 +55,15 @@
             await Task.WhenAll(Run(numbers), Run(numbers));
             startTime.Stop();
             logger.Log($"Final WhenAll result \nAsync - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
+        }
+
+        public async Task WhenAllAsyncQueryMultiple(int[] degrees)
+        {
+            foreach (var degree in degrees)
+            {
+                IEnumerable<int> numbers = Enumerable.Range(3, degree);
+                await WhenAllAsyncQuery(numbers);
+            }
         }
     }
 }
