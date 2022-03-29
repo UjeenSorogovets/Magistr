@@ -13,11 +13,11 @@ namespace WebApplication.Services
 
         public void Run(IEnumerable<int> numbers)
         {
-            //var startTime = System.Diagnostics.Stopwatch.StartNew();
-            //logger.Log("Start Simple");
+            var startTime = System.Diagnostics.Stopwatch.StartNew();
+            logger.Log("Start Simple");
             commonService.Primes(numbers);
-            //startTime.Stop();
-            //logger.Log($"Simple - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
+            startTime.Stop();
+            logger.Log($"Simple - {startTime.ElapsedMilliseconds}ms" + Environment.NewLine);
         }
 
         public void RunMultiple(int[] degrees)
