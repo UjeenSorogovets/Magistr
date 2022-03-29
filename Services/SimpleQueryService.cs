@@ -1,4 +1,6 @@
-﻿namespace WebApplication.Services
+﻿using Newtonsoft.Json;
+
+namespace WebApplication.Services
 {
     public class SimpleQueryService
     {
@@ -20,11 +22,20 @@
 
         public void RunMultiple(int[] degrees)
         {
+            List<(int, int)> array = new();
             foreach (var degree in degrees)
             {
+                var startTime = System.Diagnostics.Stopwatch.StartNew();
                 IEnumerable<int> numbers = Enumerable.Range(3, degree);
                 Run(numbers);
+
+                int elapsedMilliseconds = unchecked((int)startTime.ElapsedMilliseconds);
+                array.Add(new(degree, elapsedMilliseconds));
             }
+            
+            string output = JsonConvert.SerializeObject(array);
+            File.WriteAllText("../SimpleQuery.txt", output);
+            Console.WriteLine(output);
         }
     }
 }

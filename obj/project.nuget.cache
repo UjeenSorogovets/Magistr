@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6R2qmWTF+BMueq5LA84KHuc8ssO0dhVMmTy3+IsJ4le/1mYBqRiBecmsm9+3kqAbB7pXnxBp7n2UGBcTFVVTpw==",
+  "dgSpecHash": "74nrwQWrh62xux2NV3zb59Rq8KsQ1yE/AbtmhS/Y77hGxv81BRrrFGQ2FWZSvdXdika26NwVMNEmaJdzAmdxeg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ujeen\\source\\repos\\M\\WebApplication\\Magistr\\WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ujeen\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Ujeen\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Ujeen\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Ujeen\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Ujeen\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Ujeen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

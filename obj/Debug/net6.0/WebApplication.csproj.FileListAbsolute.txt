@@ -79,3 +79,4 @@ C:\Users\Ujeen\source\repos\M\WebApplication\Magistr\obj\Debug\net6.0\refint\Web
 C:\Users\Ujeen\source\repos\M\WebApplication\Magistr\obj\Debug\net6.0\WebApplication.pdb
 C:\Users\Ujeen\source\repos\M\WebApplication\Magistr\obj\Debug\net6.0\WebApplication.genruntimeconfig.cache
 C:\Users\Ujeen\source\repos\M\WebApplication\Magistr\obj\Debug\net6.0\ref\WebApplication.dll
+C:\Users\Ujeen\source\repos\M\WebApplication\Magistr\bin\Debug\net6.0\Newtonsoft.Json.dll
