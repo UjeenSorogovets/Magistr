@@ -8,7 +8,6 @@ namespace WebApplication.Controllers
     public class SimpleQueryController : ControllerBase
     {
         private readonly ILogger<QueryController> _logger;
-        private static readonly IEnumerable<int> numbers = Enumerable.Range(3, 1000000);
         private readonly SimpleQueryService simpleQuery = new();
         private readonly int[] degrees = Enumerable.Range(1, 100).Select(x => x * 5000).ToArray();
         public SimpleQueryController(ILogger<QueryController> logger)

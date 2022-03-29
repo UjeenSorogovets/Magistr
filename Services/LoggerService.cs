@@ -2,6 +2,7 @@
 {
     public class LoggerService
     {
+        private readonly bool isActive = false;
         public LoggerService()
         {
 
@@ -9,7 +10,7 @@
 
         public void Log(string text)
         {
-            Console.WriteLine(text);
+            if (isActive) Console.WriteLine(text);
         }
     }
 }
